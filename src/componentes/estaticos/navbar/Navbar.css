@@ -5,7 +5,8 @@
 
 :root {
   /*colors*/
-  --first--color: hsl(207, 10%, 49%);
+  --first--color: hsl(301, 60%, 29%);
+  --second-color: hsl(301, 38%, 44%);
 
   --text: hsl(0, 0%, 100%);
 }
@@ -14,6 +15,15 @@
 .text-decorator {
   text-decoration: none;
   color: white;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.typographyNav {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 /* 
@@ -30,7 +40,7 @@
 
 .appBar {
   background-color: var(--first--color) !important;
-  padding: 0.3rem;
+  padding: 0.7rem;
 }
 
 .options {
