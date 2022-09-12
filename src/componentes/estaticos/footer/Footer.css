@@ -1,0 +1,33 @@
+* {
+  text-decoration: none;
+}
+
+:root {
+  /*colors*/
+  --first--color: hsl(301, 60%, 29%);
+  --second-color: hsl(301, 38%, 44%);
+
+  --text: hsl(0, 0%, 100%);
+}
+
+.containerFooter1 {
+  background-color: var(--second-color);
+  height: 120px;
+  background: hsl(301, 38%, 44%);
+  color: #f2f2f2;
+}
+
+.containerFooter2 {
+  background-color: var(--first--color);
+  height: 60px;
+}
+
+.typographyFooter {
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 1rem;
+}
+
+.typographyFooter2 {
+  font-family: 'DM Sans', sans-serif;
+  color: white;
+}
