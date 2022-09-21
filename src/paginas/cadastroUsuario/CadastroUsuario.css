@@ -16,8 +16,8 @@
 .cad-usuario {
     background: rgba(255, 255, 255, 0.2) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-    width: 850px !important;
-    height: 520px !important;
+    width: 60% !important;
+
     border-radius: 3% !important;
 }
 
@@ -25,17 +25,14 @@
     margin-top: 4rem !important;
     background-image: url(https://i.imgur.com/vmy7Wxs.png) !important;
     background-repeat: no-repeat !important;
-    width: 300px !important;
-    background-size: 90%!important;
+    background-position: center !important;
     padding-left: 4rem;
+    height: 25rem !important;
+    border-radius: 0% !important;
 
 }
 
-.form-cad-usuario {
-    /* margin-right: 20% !important; */
-    border-radius: 4rem !important;
-    margin-right: 55rem;
-}
+
 
 
 /* .cadastro input {
@@ -50,28 +47,21 @@
     background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
     background-repeat: no-repeat !important;
     width: 300px !important;
+    height: 65px;
     background-size: 300px 65px !important;
-    margin-left: -3rem;
-    margin-top: 1rem;
-}
+    background-position: center ;
 
-.formulario-cad-usuario {
-    width: 50px !important;
-    height: 90px !important;
-    margin-top: 4rem;
 
 }
+
 
 .margin-textfield-cad {
-    margin: 6% !important;
-    margin-top: 3px !important;
-
-    /* background: rgba(0, 0, 0, 0.412) !important; */
+    margin: 5px !important;
 }
 
 
 
-.MuiFormGroup-root {
+.btn-radial.MuiFormGroup-root {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -105,7 +95,7 @@
 
 .btns {
     display: flex !important;
-
+    margin-left: 1.5rem !important;
 }
 
 /* CLASSE BTN01 */
@@ -113,7 +103,7 @@
     font-family: 'Poppins', sans-serif !important;
 }
 
-.btn01 {
+/* .btn01 {
     padding-left: 50% !important;
     padding-top: 6% !important;
     margin: 5px;
@@ -123,7 +113,7 @@
 .btn02 {
     padding-top: 6% !important;
     margin: 5px;
-}
+} */
 
 /* CLASSE BTN02 */
 
@@ -148,16 +138,19 @@
     margin-left: 1rem;
 }
 
-
+.btns {
+    margin: 1rem;
+}
 
 
 /* CLASSE BTN01 */
 
 /* CLASSE BTN02 */
 .btn02 {
+    margin-left: .5rem !important;
     -webkit-tap-highlight-color: purple !important;
     background-color: purple !important;
-    color: white !important;
+    color: #ffffff !important;
     font-weight: bold !important;
     border-radius: 4rem !important;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
@@ -189,4 +182,8 @@ label {
 
 .mostrar {
     display: block;
+}
+
+form TextField {
+    
 }
