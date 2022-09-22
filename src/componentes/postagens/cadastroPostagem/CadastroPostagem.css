@@ -2,12 +2,21 @@
   background-color: #762cad !important;
   font-family: "Poppins", sans-serif !important;
   margin-top: 1rem !important;
+  margin-left: 65px !important;
+  margin-right: 65px !important;
 }
 
 .cadastro-postagem {
   font-family: "Poppins", sans-serif !important;
+  white-space: nowrap !important;
+margin-left: 110px !important;
+margin-right: 95px !important;
 }
 
 .topo {
   font-family: "Poppins", sans-serif !important;
+}
+
+#demo-simple-select-helper-label{
+  margin-left: 140px !important;
 }
