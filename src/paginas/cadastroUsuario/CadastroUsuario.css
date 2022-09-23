@@ -1,170 +1,118 @@
-.MuiInputBase-root {
-  font-family: "Poppins", sans-serif !important;
-}
 
-/* BOX COM O BACKGROUND  */
+/* BACKGROUND - GRADIENTE  */
 .container-cad-usuario {
-  background: linear-gradient(
-    45deg,
-    rgba(60, 0, 97, 1) 0%,
-    rgba(118, 44, 173, 1) 50%,
-    rgba(136, 67, 171, 1) 100%
-  ) !important;
-  /* padding-top: 5rem;
-    padding-bottom: 15rem;
-    padding-right: 0rem;
-    padding-left: 0rem; */
-  height: 100vh;
+    background: linear-gradient(45deg, rgba(60, 0, 97, 1) 0%, rgba(118, 44, 173, 1) 50%, rgba(136, 67, 171, 1) 100%) !important;
+    height: 100vh;
 }
 
+/* BOX CADASTRO - BACKGROUND TRANSPARENTE*/
 .cad-usuario {
-  background: rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-  width: 850px !important;
-  height: 520px !important;
-  border-radius: 3% !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    width: 53.125rem !important;
+    height: 32.5rem !important;
+    border-radius: 3% !important;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.3) !important;
 }
 
+/* BOX BACKGROUND IMAGEM (IMAGEM 3D)*/
 .img-cad-user {
-  margin-top: 4rem !important;
-  background-image: url(https://i.imgur.com/vmy7Wxs.png) !important;
-  background-repeat: no-repeat !important;
-  width: 300px !important;
-  background-size: 90% !important;
-  padding-left: 4rem;
+    margin-top: 4rem !important;
+    background-image: url(https://i.imgur.com/vmy7Wxs.png) !important;
+    background-repeat: no-repeat !important;
+    width: 18.75rem !important;
+    background-size: 90% !important;
+    padding-left: 4rem;
+
 }
 
+/* ESPAÇAMENTO IMAGEM x FORMULÁRIO */
 .form-cad-usuario {
-  /* margin-right: 20% !important; */
-  border-radius: 4rem !important;
-  margin-right: 55rem;
+    margin-right: -3rem;
 }
 
-/* .cadastro input {
-    height: 10px !important;
-    width: 20px !important;
-    align-items: center !important;
-    justify-content: center !important;
-} */
-
+/* BOX BACKGROUND LOGO (SHAMEUP) FORMULARIO */
 .form-cad-usuario-logo {
-  background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
-  background-repeat: no-repeat !important;
-  width: 300px !important;
-  background-size: 300px 65px !important;
-  margin-left: -3rem;
-  margin-top: 1rem;
+    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
+    background-repeat: no-repeat !important;
+    width: 18.75rem !important;
+    background-size: 18.75rem 4rem !important;
+    margin-left: -5rem;
+    margin-top: 1rem;
 }
 
+/* ALINHAMENTO FORMULARIO + LOGO */
 .formulario-cad-usuario {
-  width: 50px !important;
-  height: 90px !important;
-  margin-top: 4rem;
+    width: 3.125rem !important;
+    margin-top: 4rem;
 }
 
+/* ESPAÇAMENTO DO TEXTIFIELD */
 .margin-textfield-cad {
-  margin: 6% !important;
-  margin-top: 3px !important;
-
-  /* background: rgba(0, 0, 0, 0.412) !important; */
+    margin: 6% !important;
 }
 
-.MuiFormGroup-root {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
-  -webkit-box-flex-wrap: nowrap !important;
-  -webkit-flex-wrap: wrap !important;
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: nowrap !important;
-  font-size: 6px !important;
-  align-items: center !important;
-  margin-left: 65%;
+/* FONTE DO TEXTFIELD */
+.margin-textfield-cad .MuiInputBase-root {
+    font-family: 'Poppins', sans-serif !important;
 }
 
-.MuiTypography-root .typography-cad-user {
-  font-size: 14px !important;
-  display: flex;
-  align-items: center !important;
-  font-family: "Poppins", sans-serif !important;
-}
-
-.MuiRadio-root.Mui-checked {
-  color: rgb(194, 144, 240) !important;
-}
-
-.MuiInputLabel-root {
-  line-height: 1 !important;
-}
-
-.btns {
-  display: flex !important;
-}
-
-/* CLASSE BTN01 */
-.MuiButton-root {
-  font-family: "Poppins", sans-serif !important;
-}
-
-.btn01 {
-  padding-left: 50% !important;
-  padding-top: 6% !important;
-  margin: 5px;
-}
-
-.btn02 {
-  padding-top: 6% !important;
-  margin: 5px;
-}
-
-/* CLASSE BTN02 */
-
-/* CLASSE FORM */
-.typography-cad-user {
-  /* background: rgba(255, 255, 255, 0.108) !important; */
-  /* border-radius: 3rem !important; */
-  /* padding: 7px !important; */
-  /* height: 2rem !important; */
-  /* backdrop-filter: blur(5px) !important; */
-}
-
+/* ESTILIZAÇÃO E ALINHAMENTO DOS TEXTFIELDS */
 .typography-cad-user .MuiOutlinedInput-root {
-  background-color: rgba(248, 244, 250, 0.2) !important;
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  text-decoration: none;
-  width: 15rem !important;
-  height: 2.5rem !important;
-  margin-left: 1rem;
+    background-color: rgba(248, 244, 250, 0.335) !important;
+    border-radius: 1rem;
+    width: 15rem !important;
+    height: 2.5rem !important;
+    margin-left: 1rem;
+    color: white !important;
+    font-size: 14.5px !important;
 }
 
-/* CLASSE BTN01 */
-
-/* CLASSE BTN02 */
-.btn02 {
-  -webkit-tap-highlight-color: purple !important;
-  background-color: purple !important;
-  color: white !important;
-  font-weight: bold !important;
-  border-radius: 4rem !important;
-  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
-    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
+/* CHECKBOX - PF & PJ */
+.btn-radial.MuiFormGroup-root {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    margin-left: 65%;
+    margin-top: 5%;
 }
 
+/* CORES (RADIAL) - BOTÕES PF & PJ */
+.btn-radial .MuiRadio-root.Mui-checked {
+    color: rgb(194, 144, 240) !important;
+}
+
+/* BOTÕES CANCELAR & CADASTRAR */
+.btns {
+    display: flex !important;
+    margin-top: 7px;
+}
+
+/* BOX - BOTÃO CANCELAR */
+.btn01 {
+    padding-left: 50% !important;
+    padding-top: 6% !important;
+    margin: 5px;
+}
+
+/* BUTTON - CANCELAR */
 .btnCancelar {
-  background-color: rgb(194, 144, 240) !important;
-  font-weight: bold !important;
-  border-radius: 4rem !important;
-  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
-    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
+    background-color: rgb(194, 144, 240) !important;
+    border-radius: 4% !important;
+    font-weight: 700 !important;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
-label {
-  align-items: center !important;
+/* BUTTON - CADASTRAR */
+.btn02 {
+    margin-top: 0.5rem !important;
+    padding-top: 6% !important;
+    margin: 5px;
+    background-color: rgba(60, 0, 97, 1) !important;
+    color: white !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    border-radius: 4% !important;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
 .fisica {

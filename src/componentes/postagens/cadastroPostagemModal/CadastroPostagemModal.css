@@ -1,9 +1,13 @@
-.bgCadastroP {
+.botaomodal {
   background-color: #762cad !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-top: 1rem !important;
+}
+
+.cadastro-postagem {
   font-family: "Poppins", sans-serif !important;
 }
 
-.bgListaPB2 {
-  background-color: #762cad !important;
+.topo {
   font-family: "Poppins", sans-serif !important;
 }

@@ -1,0 +1,143 @@
+.text-decorator-none {
+    text-decoration: none;
+  }
+  
+  .bgListaPost {
+    background-color: #cecece !important;
+  }
+  
+  .fonteListaPe {
+    font-family: "Poppins", sans-serif !important;
+  }
+  
+  .listaPost {
+    /* height: 100vh; */
+  }
+  
+  .marginLeftListaP {
+    margin-left: 0px !important;
+  }
+  
+  .bgListaPB {
+    background-color: rgb(209, 88, 193) !important;
+  }
+  
+  .bgbotaolista {
+    background-color: #5e0d4c !important;
+  }
+  
+  .info-usuario-postagem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-postagem {
+    margin-left: 1rem;
+  }
+  
+  .img-usuario-postagem {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 16px;
+  }
+  
+  .nome-usuario-postagem {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .data-postagem-listar {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .feedback {
+    display: flex !important;
+    align-items: left !important;
+    justify-content: left !important;
+  
+    margin: 10px 15px !important;
+  }
+  
+  .textfield-feedback {
+  }
+  
+  .feedback2 {
+    /* margin-top: 50px !important ;*/
+    margin-left: 14px !important;
+    font-family: "Poppins", sans-serif !important;
+  }
+  
+  .buttonfeedback {
+    margin-top: 1.5rem !important;
+  }
+  
+  .botao-submit-comentario {
+    background-color: #762cad !important;
+    font-family: "Poppins", sans-serif !important;
+    margin-left: 14px !important;
+  }
+  
+  .pad {
+    margin-left: 14px !important;
+    align-items: center !important;
+  }
+  
+  .cont {
+    width: 60vw;
+    padding: 14px;
+  }
+  
+  .card-postagem {
+    background-color: rgb(222, 226, 230);
+    padding: 1rem 2rem !important;
+    margin: 1.5rem;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  
+  .categoria-post {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+  }
+  
+  .titulo-post {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .texto-postagem {
+    margin-top: 1rem;
+  }
+  
+  .card-buttons {
+    justify-content: end;
+  }
+  
+  .before:before {
+    content: "";
+    width: 45rem;
+    height: 1px;
+    background-color: #a97adf;
+    top: 25;
+    position: absolute;
+    left: 40%;
+    margin-right: -50%;
+  }
+  
+  .form-comentario {
+    margin-top: 2rem;
+  }
+  
+  .btnAtualizarPostagem {
+    color: #360c58 !important;
+    font-weight: bold !important;
+    background-color: #d5b2ef !important;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5rem !important;
+  }
+  

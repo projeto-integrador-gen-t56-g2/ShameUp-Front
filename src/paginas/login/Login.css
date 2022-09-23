@@ -9,13 +9,17 @@
     color: white;
 }
 
-.titulo{
+.logologin{
     background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
     background-repeat: 'no-repeat' !important;
-    width: 300px !important;
-    background-size: 300px 65px !important;
-    background-position: center ;
-    margin: auto;
+    width: 18.75rem !important;
+    background-size: 18.75rem 4rem !important;
+    background-position: center !important;
+    display: block !important;
+    justify-content: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
 }
 
 .subtitulo{
@@ -26,8 +30,8 @@
     
 }
 
-.btn{
-  background-color: rgba(60,0,97,1)!important;
+.btnEntrar{
+  background-color: rgb(60,0,97) !important;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -42,8 +46,12 @@
 .background{
     background: rgb(118,44,173);
     background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
-    background-size: 100%;
-    padding-bottom: 4.3rem
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    
 }
 
 .text-decorator-none{
@@ -58,16 +66,14 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 3.75rem;
-    margin-left: 6.7rem;
-    padding: 0;
-    box-sizing:content-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    width: 150px;
-    position: relative;
+    display: block;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 22vw;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -113,3 +119,4 @@
     font-family: "Poppins", sans-serif !important;
     color: white !important;
 }
+

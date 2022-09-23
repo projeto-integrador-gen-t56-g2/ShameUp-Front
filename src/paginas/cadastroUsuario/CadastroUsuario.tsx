@@ -138,14 +138,14 @@ function CadastroUsuario() {
       <Box className="cad-usuario" display="flex" flexDirection="row-reverse" justifyContent="space-evenly" >
 
         {/* <Box className="form" display="flex" flexDirection="column"  > */}
-        <Box className="form-cad-usuario-logo">
-        
+        <Box className="form-cad-usuario-logo"></Box>
         <Box className="form-cad-usuario">
+        
           <Box className="formulario-cad-usuario" display="flex" flexDirection="column" >
+            
+         
             <form onSubmit={cadastrar} noValidate autoComplete="off" className="form-cadastro-usuario">
               
-              
-
               <FormControl className={tipos.field}>
 
                 <RadioGroup className="btn-radial" value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -158,10 +158,10 @@ function CadastroUsuario() {
                 value={user.nome}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="nome"
-                placeholder="nome"
+                placeholder="Nome"
                 variant="outlined"
                 name="nome"
-                className="typography-cad-user"
+                className="margin-textfield-cad typography-cad-user"
               />
               <TextField
                 value={dataNascimento}
@@ -170,7 +170,7 @@ function CadastroUsuario() {
                 placeholder="Digite sua Data de nascimento"
                 variant="outlined"
                 name="dataNascimento"
-                className="margin-textfield-cad  typography-cad-user"
+                className="margin-textfield-cad typography-cad-user"
                 type="date"
                 InputLabelProps={{ shrink: true }}
                 required
@@ -180,7 +180,7 @@ function CadastroUsuario() {
                 value={user.foto}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="foto"
-                placeholder="url da foto"
+                placeholder="Url da Foto"
                 variant="outlined"
                 name="foto"
                 className="margin-textfield-cad typography-cad-user"
@@ -212,7 +212,7 @@ function CadastroUsuario() {
                 value={user.email}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="email"
-                placeholder="e-mail"
+                placeholder="E-mail"
                 variant="outlined"
                 name="email"
                 className="margin-textfield-cad typography-cad-user"
@@ -221,7 +221,7 @@ function CadastroUsuario() {
                 value={user.senha}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="senha"
-                placeholder="senha"
+                placeholder="Senha"
                 variant="outlined"
                 name="senha"
                 className="margin-textfield-cad typography-cad-user"
@@ -234,7 +234,7 @@ function CadastroUsuario() {
                   confirmarSenhaHandle(e)
                 }
                 id="confirmarSenha"
-                placeholder="confirmar senha"
+                placeholder="Confirmar Senha"
                 variant="outlined"
                 name="confirmarSenha"
                 className="margin-textfield-cad typography-cad-user"
@@ -252,8 +252,8 @@ function CadastroUsuario() {
                     </Button>
                   </Link>
                 </Box>
-                <Box className="btn02">
-                  <Button type="submit">
+                <Box>
+                  <Button className='btn02' type="submit">
                     Cadastrar
                   </Button>
                 </Box>
@@ -261,9 +261,7 @@ function CadastroUsuario() {
             </form>
           </Box>
         </Box>
-        </Box>
         <Box className="img-cad-user">
-
         </Box>
       </Box>
     </Box>

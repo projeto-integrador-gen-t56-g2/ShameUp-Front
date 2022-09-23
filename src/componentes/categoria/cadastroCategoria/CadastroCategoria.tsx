@@ -136,67 +136,57 @@ function CadastroCategoria() {
   }
 
   return (
-    <Box className="backgroundcategoria" justifyContent="center" alignItems="center">
-      <div className="divform">
-        <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundform">
-          <Grid alignItems="center" item sm={6} >
-            <Box>
-              <form onSubmit={onSubmit}>
-                <Typography
-                  className="titulocategoria"
-                  variant="h3"
-                  color="textSecondary"
-                  component="h1"
-                  align="center"
-                >
-                  Cadastro de Categorias
-                </Typography>
-                <div className="textfield1">
-                  <TextField
-                    value={categoria.nome}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-                    id="nome"
-                    variant="outlined"
-                    placeholder="Nome - no minimo 3 caracteres"
-                    name="nome"
-                    margin="normal"
-                    className="nome"
-                    fullWidth
-                  /></div>
+    <Box className="backgroundcategoria" justifyContent="center" alignItems="center" display="flex">
+      <Grid container className="backgroundform" >
+        <Grid item sm={6}>
+          <form onSubmit={onSubmit} className="form-cad-categoria">
+            <Typography
+              className="titulocategoria"
+              variant="h5"
+              color="textSecondary"
+              component="h5"
+              align="center"
+            >
+              Cadastro de Categorias
+            </Typography>
+            <TextField
+              value={categoria.nome}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+              id="nome"
+              variant="outlined"
+              placeholder="Nome - no minimo 3 caracteres"
+              name="nome"
+              margin="normal"
+              className="nome21"
+              fullWidth
+            />
 
-                <div className="textfield2">
-                  <TextField
-                    value={categoria.descricao}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-                    id="descricao"
-                    multiline
-                    variant="outlined"
-                    placeholder="Descrição - no minimo 3 caracteres"
-                    name="descricao"
-                    margin="normal"
-                    className="descricao"
-                    fullWidth
+            <TextField
+              value={categoria.descricao}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+              multiline
+              variant="outlined"
+              placeholder="Descrição - no minimo 3 caracteres"
+              name="descricao"
+              margin="normal"
+              className="txt-field-descricao"
+              id="descricao"
+              fullWidth
 
-                  />
-
-
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    className="btn"
-                  >
-                    Finalizar
-                  </Button>
-                </div>
-              </form>
-            </Box>
-          </Grid>
-          <Grid alignItems="center" item className="imagem" sm={6} >
-
-          </Grid>
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              className="btn btn-cad-categoria"
+            >
+              Finalizar
+            </Button>
+          </form>
         </Grid>
-      </div>
+        <Box className="imagemFormularioCategoria">
+        </Box>
+      </Grid>
     </Box>
 
   );
@@ -204,4 +194,3 @@ function CadastroCategoria() {
 
 export default CadastroCategoria;
 
-//./categoria/cadastroCategoria/CadastroCategoria

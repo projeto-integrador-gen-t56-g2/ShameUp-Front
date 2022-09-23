@@ -1,80 +1,86 @@
-  .backgroundform{
-    border-radius: 2rem;
-    height: 63vh;
-    width: 70% !important;
-    padding: 5rem;
-    background-color: #8F54BA;
-    text-align: right;
-    margin-left: auto !important;
-    margin-right: auto !important; 
-    margin-bottom: 0!important;
-    
-
-  }
-
-  .divform{
-    padding-top: 8%;
-  }
-
-  .backgroundcategoria{
-    background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
-    height: 100vh;
-    width: 100vw;
-    justify-content: center !important;
-    align-items: center !important;
-    
+.backgroundcategoria {
+  background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  );
+  height: 100vh;
+  width: 100%;
 }
 
-  .titulocategoria{
-    font-weight: bold !important;
-    font-family: "Poppins", sans-serif !important;
-    color: rgb(243, 243, 243) !important;
-    width: 37rem !important;
-    padding-bottom: 2rem;
+.backgroundform {
+  border-radius: 2rem;
+  width: 60% !important;
+  background-color: #8f54ba;
+  text-align: right;
+}
+
+.divform {
+  padding-top: 8%;
+}
+
+.form-cad-categoria{
+  padding: 2rem;
+}
+
+.titulocategoria {
+  font-weight: bold !important;
+  font-family: "Poppins", sans-serif !important;
+  color: rgb(243, 243, 243) !important;
+  padding-bottom: 2rem;
 }
 
 #descricao{
-  height: 11rem !important;
+  height: 9rem !important;
 }
 
-.nome{
-  background-color: #D5B2EF !important;
-  border-radius: 16px;
+.nome21 {
+  background-color: #d5b2ef !important;
+  border-radius: 16px !important;
   backdrop-filter: blur(5px);
-  text-decoration:none;
-  
+  text-decoration: none;
 }
 
-
-.descricao{
-  background-color: #D5B2EF !important;
-  border-radius: 16px;
+.txt-field-descricao {
+  background-color: #d5b2ef !important;
+  border-radius: 16px !important;
   backdrop-filter: blur(5px);
-  text-decoration:none;
-  
+  text-decoration: none;
 }
 
-.nome .MuiOutlinedInput-root {
+.nome21 .MuiOutlinedInput-root {
   border-radius: 16px;
 }
 
-.descricao .MuiOutlinedInput-root {
+.txt-field-descricao .MuiOutlinedInput-root {
   border-radius: 16px;
 }
 
-.imagem{
-  background-image: url(https://cdn.discordapp.com/attachments/988429116711772190/1020396560598696038/fundo.png);
-  background-size: cover;
-  justify-content: center !important;
-  width: 28rem !important;
-  height: 25rem !important;
-  border-radius: 0% !important;
+.imagemFormularioCategoria {
+  background-image: url(https://cdn.discordapp.com/attachments/988429116518850603/1021833689476374528/3d-business-young-women-sitting-with-laptop-on-the-table.png);
+  margin-top: 3rem !important;
+  background-repeat: no-repeat !important;
+  width: 26rem !important;
+  background-size: 90% !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.textfield1{
-  width: 38rem; 
+@media (max-height: 768px)
+{
+  .backgroundform
+   {
+    width: 55rem !important;
+   }
+   
 }
 
-.textfield2{
-  width: 38rem;
+@media (max-height: 1024px)
+{
+  .backgroundform
+   {
+    width: 55rem !important;
+   }
+   
 }

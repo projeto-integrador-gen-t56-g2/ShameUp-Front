@@ -13,8 +13,9 @@ margin-left: 110px !important;
 margin-right: 95px !important;
 }
 
-.topo {
-  font-family: "Poppins", sans-serif !important;
+.form-cad-postagem {
+  padding: 1rem;
+  padding-left: 2.5rem;
 }
 
 #demo-simple-select-helper-label{

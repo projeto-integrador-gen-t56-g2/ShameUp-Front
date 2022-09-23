@@ -1,86 +1,142 @@
-import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react'
-import { Link } from 'react-router-dom'
-import Postagem from '../../../models/Postagem'
-import { busca } from '../../../services/Service'
+import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
+import { Link } from "react-router-dom";
+import Postagem from "../../../models/Postagem";
+import { busca, post } from "../../../services/Service";
 import {
   Card,
   CardActions,
   CardContent,
   Button,
   Typography,
-  TextField
-} from '@material-ui/core'
-import { Box } from '@mui/material'
-import './ListarPostagem.css'
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { UserState } from '../../../store/tokens/userReducer'
-import { toast } from 'react-toastify'
-import ComentarioPostagem from '../comentarioPostagem/ComentarioPostagem'
+  TextField,
+} from "@material-ui/core";
+import { Box } from "@mui/material";
+import "./ListarPostagem.css";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { UserState } from "../../../store/tokens/userReducer";
+import { toast } from "react-toastify";
+import ComentarioPostagem from "../comentarioPostagem/ComentarioPostagem";
+import { PostAddRounded } from "@mui/icons-material";
+import ModalDeletarPostagem from "../modalDeletarPostagem/ModalDeletarPostagem";
 
-function ListaPostagem() {
-  const [posts, setPosts] = useState<Postagem[]>([])
-  let navigate = useNavigate()
-  const token = useSelector<UserState, UserState['tokens']>(
-    state => state.tokens
-  )
+function ListarPostagem() {
+  const [posts, setPosts] = useState<Postagem[]>([]);
+  let navigate = useNavigate();
+  const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  );
 
   useEffect(() => {
-    if (token == '') {
-      toast.info('Você precisa estar logado!', {
-        position: 'top-center',
+    if (token == "") {
+      toast.info("Você precisa estar logado!", {
+        position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: false,
-        theme: 'dark',
-        progress: undefined
-      })
-      navigate('/login')
+        theme: "dark",
+        progress: undefined,
+      });
+      navigate("/login");
     }
-  }, [token])
+  }, [token]);
 
   async function getPost() {
-    await busca('/postagens', setPosts, {
+    await busca("/postagens", setPosts, {
       headers: {
-        Authorization: token
-      }
-    })
+        Authorization: token,
+      },
+    });
   }
 
   useEffect(() => {
-    getPost()
-  }, [posts.length])
+    getPost();
+  }, [posts.length]);
 
   const [comments, setComments] = useState([
-    'Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.'
-  ])
+    "Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.",
+  ]);
 
-  const [newCommentText, setNewCommentText] = useState('')
+  const [newCommentText, setNewCommentText] = useState("");
 
   function handleCreateNewComment(event: FormEvent) {
-    event.preventDefault()
-    setComments([...comments, newCommentText])
-    setNewCommentText('')
+    event.preventDefault();
+    setComments([...comments, newCommentText]);
+    setNewCommentText("");
   }
 
   function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    setNewCommentText(event.target.value)
+    setNewCommentText(event.target.value);
+  }
+
+  function getData(data: string) {
+    let dataString = data.split("T")[0];
+    let horaString = data.split("T")[1];
+    horaString = horaString.split(".")[0];
+
+    let dia = dataString.split("-")[2];
+    let mes = dataString.split("-")[1];
+    let ano = dataString.split("-")[0];
+
+    let hora = horaString.split(":")[0];
+    let minuto = horaString.split(":")[1];
+    let segundo = horaString.split(":")[2];
+
+    return `${dia}-${mes}-${ano} ${hora}:${minuto}:${segundo}`;
   }
 
   return (
     <>
-      {posts.map(post => (
+      {posts.map((post) => (
         <Box m={2} key={post.id}>
           <Card
             variant="outlined"
             className="bgListaPost fonteListaPe listaPost"
           >
             <CardContent className="card-postagem">
-              <Typography variant="h5" component="h2">
-                {post.anonimo}
-              </Typography>
+              {!post.anonimo ? (
+                <Box className="info-usuario-postagem">
+                  <img
+                    src="https://i.imgur.com/mULO3ga.jpg"
+                    alt="Imagem do usuário anônimo"
+                    className="img-usuario-postagem"
+                  />
+                  <Box className="info-postagem">
+                    <Typography className="nome-usuario-postagem">
+                      Usuário Anônimo
+                    </Typography>
+                    <Typography className="data-postagem-listar">
+                      {getData(post.data)}
+                    </Typography>
+                  </Box>
+                </Box>
+              ) : (
+                <Box className="info-usuario-postagem">
+                  {post.usuario?.foto ? (
+                    <img
+                      src={post.usuario?.foto}
+                      alt="Imagem do usuário"
+                      className="img-usuario-postagem"
+                    />
+                  ) : (
+                    <img
+                      src="https://i.imgur.com/mULO3ga.jpg"
+                      alt="Imagem do usuário sem foto"
+                      className="img-usuario-postagem"
+                    />
+                  )}
+                  <Box className="info-postagem">
+                    <Typography className="nome-usuario-postagem">
+                      {post.usuario?.nome}
+                    </Typography>
+                    <Typography className="data-postagem-listar">
+                      {getData(post.data)}
+                    </Typography>
+                  </Box>
+                </Box>
+              )}
               <Typography
                 variant="h6"
                 component="h6"
@@ -110,27 +166,16 @@ function ListaPostagem() {
                       variant="contained"
                       size="small"
                       color="primary"
-                      className="marginLeftListaP fonteListaPe bgListaPB"
+                      className="marginLeftListaP fonteListaPe bgListaPB btnAtualizarPostagem"
                     >
                       atualizar
                     </Button>
                   </Box>
                 </Link>
-                <Link
-                  to={`/deletarPostagem/${post.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      size="small"
-                      color="secondary"
-                      className="marginLeftListaP fonteListaPe bgbotaolista"
-                    >
-                      deletar
-                    </Button>
-                  </Box>
-                </Link>
+
+                <Box marginRight={1}>
+                  <ModalDeletarPostagem idPostagem={post.id} />
+                </Box>
               </Box>
             </CardActions>
             <span className="before"></span>
@@ -165,15 +210,15 @@ function ListaPostagem() {
             </form>
 
             <div className="cont">
-              {comments.map(comment => {
-                return <ComentarioPostagem conteudo={comment} />
+              {comments.map((comment) => {
+                return <ComentarioPostagem conteudo={comment} />;
               })}
             </div>
           </Card>
         </Box>
       ))}
     </>
-  )
+  );
 }
 
-export default ListaPostagem
+export default ListarPostagem;

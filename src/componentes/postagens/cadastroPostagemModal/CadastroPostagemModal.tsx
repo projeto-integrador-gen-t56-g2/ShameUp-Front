@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import "./CadastroPostagem.css";
+import "./CadastroPostagemModal.css";
 import Categoria from "../../../models/Categoria";
 import Postagem from "../../../models/Postagem";
 
@@ -13,15 +13,12 @@ import {
   MenuItem,
   FormControl,
   FormHelperText,
-  Grid
 } from "@material-ui/core";
-
 import { useNavigate, useParams } from "react-router-dom";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
-import { Box } from "@mui/material";
 
 function CadastroPostagem() {
   let navigate = useNavigate();
@@ -253,7 +250,7 @@ function CadastroPostagem() {
             ))}
           </Select>
           <FormHelperText className="cadastro-postagem">
-          Escolha uma categoria: 
+            Escolha uma categoria para a postagem
           </FormHelperText>
           <Button
             className="botaomodal"

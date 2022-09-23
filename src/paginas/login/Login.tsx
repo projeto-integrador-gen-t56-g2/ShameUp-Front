@@ -106,9 +106,10 @@ function Login() {
     <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
       <Grid alignItems="center" sm={6} >
         <Box paddingX={20} className="container">
-          <form onSubmit={onSubmit}>
-            <Box display="flex" justifyContent="center" marginTop={2} className="titulo">
+        <Box marginTop={2} className="logologin">
             </Box>
+          <form onSubmit={onSubmit} >
+            
             <Typography variant="subtitle1" gutterBottom align="center" className="subtitulo">
                 Aqui é o seu local de fala
               </Typography>
@@ -154,10 +155,10 @@ function Login() {
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" className="lembrar" />}
-              className="lembrar" label="Me lembre"
+              className="lembrar" label="Continuar conectado"
             />
             <Box marginTop={2} textAlign="center">
-              <Button type="submit" variant="contained" className="btn"> Entrar</Button>
+              <Button type="submit" variant="contained" className="btnEntrar"> Entrar</Button>
             </Box>
 
 

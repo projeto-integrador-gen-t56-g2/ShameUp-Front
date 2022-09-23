@@ -15,9 +15,13 @@ import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 
-function DeletarPostagem() {
+interface DeletarPostagemProps {
+  idPostagem: number;
+}
+
+function DeletarPostagem({ idPostagem }: DeletarPostagemProps) {
   let navigate = useNavigate();
-  const { id } = useParams<{ id: string }>();
+
   const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
@@ -40,13 +44,13 @@ function DeletarPostagem() {
   }, [token]);
 
   useEffect(() => {
-    if (id !== undefined) {
-      findById(id);
+    if (idPostagem !== undefined) {
+      findById(idPostagem.toString());
     }
-  }, [id]);
+  }, [idPostagem]);
 
-  async function findById(id: string) {
-    buscaId(`/postagens/${id}`, setPosts, {
+  async function findById(idPostagem: string) {
+    buscaId(`/postagens/${idPostagem}`, setPosts, {
       headers: {
         Authorization: token,
       },
@@ -55,7 +59,7 @@ function DeletarPostagem() {
 
   function sim() {
     navigate("/postagens");
-    deleteId(`/postagens/${id}`, {
+    deleteId(`/postagens/${idPostagem}`, {
       headers: {
         Authorization: token,
       },
@@ -93,7 +97,7 @@ function DeletarPostagem() {
                 <Button
                   onClick={sim}
                   variant="contained"
-                  className="marginLeft"
+                  className="marginLeft bgCadastroP bgListaPB2"
                   size="large"
                   color="primary"
                 >
@@ -106,6 +110,7 @@ function DeletarPostagem() {
                   variant="contained"
                   size="large"
                   color="secondary"
+                  className="bgCadastroP bgListaPB2"
                 >
                   Não
                 </Button>

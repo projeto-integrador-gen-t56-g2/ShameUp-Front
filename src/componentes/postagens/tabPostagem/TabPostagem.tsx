@@ -3,6 +3,7 @@ import { AppBar, Tab, Tabs, Typography, Grid } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { TabContext, TabPanel } from "@material-ui/lab";
 import ListarPostagem from "../listarPostagem/ListarPostagem";
+import ListarPostagemUsuario from "../listarPostagemUsuario/ListarPostagemUsuario";
 import "./TabPostagem.css";
 
 function TabPostagem() {
@@ -36,7 +37,7 @@ function TabPostagem() {
             justifyContent="center"
             className="caixatabpostagem"
           >
-            <ListarPostagem />
+            <ListarPostagemUsuario />
           </Box>
         </TabPanel>
       </TabContext>

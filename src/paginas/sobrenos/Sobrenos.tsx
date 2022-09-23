@@ -1,32 +1,34 @@
-import React, { useEffect } from "react";
-import { Typography, Grid } from "@material-ui/core";
-import "./Sobrenos.css";
-import { useSelector } from "react-redux";
-import { UserState } from "../../store/tokens/userReducer";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { Typography, Grid } from '@material-ui/core'
+import './Sobrenos.css'
+import { useSelector } from 'react-redux'
+import { UserState } from '../../store/tokens/userReducer'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkendIn from '@mui/icons-material/LinkedIn'
 
 function Sobrenos() {
-  let navigate = useNavigate();
-  const token = useSelector<UserState, UserState["tokens"]>(
-    (state) => state.tokens
-  );
+  let navigate = useNavigate()
+  const token = useSelector<UserState, UserState['tokens']>(
+    state => state.tokens
+  )
 
   useEffect(() => {
-    if (token == "") {
-      toast.info("Você precisa estar logado!", {
-        position: "top-center",
+    if (token == '') {
+      toast.info('Você precisa estar logado!', {
+        position: 'top-center',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: false,
-        theme: "dark",
-        progress: undefined,
-      });
-      navigate("/login");
+        theme: 'dark',
+        progress: undefined
+      })
+      navigate('/login')
     }
-  }, [token]);
+  }, [token])
   return (
     <>
       <Grid className="cordefundo">
@@ -68,9 +70,158 @@ function Sobrenos() {
             />
           </Grid>
         </Grid>
+
+        <Grid>
+          <Grid className="titleIntegrantes">
+            <h1>Integrantes</h1>
+          </Grid>
+
+          <Grid className="containerIntegrantes">
+            <Grid spacing={1} className="containerIntegrantes1">
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566446322167938/cachedImage.jpg"
+                  alt="Foto do André"
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">André Parelho</p>
+                <a
+                  href="https://www.linkedin.com/in/andr%C3%A9-parelho-das-neves-3a3610137/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/andreparelho" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566446041145436/cachedImage.jpg"
+                  alt="Foto do Igor"
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Igor Sato</p>
+                <a
+                  href="https://www.linkedin.com/in/igoryouiti/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/igoryouiti" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566447253307402/IMG_5485.jpg"
+                  alt="Foto da Lívia"
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Lívia Ferreira</p>
+                <a
+                  href="https://www.linkedin.com/in/liviaflore/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/liviaflore" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566446477361152/IMG_5483.jpg"
+                  alt="Foto do Lucas"
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Lucas Dantas</p>
+                <a
+                  href="https://www.linkedin.com/in/lucas-dantas-6837b9227/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/DantasZo" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+            </Grid>
+            <Grid spacing={1} className="containerIntegrantes1">
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566528408883291/IMG_5486.jpg"
+                  alt="Foto do Luiz"
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes"> Luiz Gabriel</p>
+                <a
+                  href="https://www.linkedin.com/in/luiz-gabriel-641a45230/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/luizbeep" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566527775539250/cachedImage.jpg"
+                  alt=""
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Pedro Chaves</p>
+                <a
+                  href="https://www.linkedin.com/in/pedro-chaves-santos-curaça-de-araujo-31a61b217/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/PedroChaves22" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566527104454757/cachedImage.jpg"
+                  alt=""
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Samy de Simone</p>
+                <a
+                  href="linkedin.com/in/samy-de-simoni-souza-39945623a/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/Samydesimoni" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+              <Grid xs={6} sm={3} className="gridIntegrantes">
+                <img
+                  src="https://cdn.discordapp.com/attachments/988429116711772190/1022566527695851581/IMG_5484.jpg"
+                  alt=""
+                  className="fotosIntegrantes"
+                />
+                <p className="nomeIntegrantes">Sthefany Lins</p>
+                <a
+                  href="https://www.linkedin.com/in/sthefanyalbuquerque/"
+                  target="_blank"
+                >
+                  <LinkendIn className="iconIntegrantes" />
+                </a>
+                <a href="https://github.com/sthelins" target="_blank">
+                  <GitHubIcon className="iconIntegrantes" />
+                </a>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
     </>
-  );
+  )
 }
 
-export default Sobrenos;
+export default Sobrenos

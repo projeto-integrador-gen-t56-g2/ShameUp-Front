@@ -55,6 +55,7 @@ function ListaCategoria() {
     <>
       <Box className="backgroundlista">
         <Box className="caixaTitleEBtn">
+          <div className="divBtCategoria">
           <Box>
             <h1 className="titleCategorias">Categorias</h1>
           </Box>
@@ -63,6 +64,7 @@ function ListaCategoria() {
               <Button className="btnNovaCategoria">Nova Categoria</Button>
             </Link>
           </Box>
+          </div>
         </Box>
         <Box justifyContent="center" alignItems="center">
           {categorias.map(categoria => (

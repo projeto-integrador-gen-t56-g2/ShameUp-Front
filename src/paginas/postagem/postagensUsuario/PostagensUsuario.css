@@ -1,0 +1,12 @@
+.background-postagens-usuario {
+    padding: 0;
+    top: 8rem;
+    background: linear-gradient(
+        45deg,
+        rgba(60, 0, 97, 1) 0%,
+        rgba(118, 44, 173, 1) 50%,
+        rgba(136, 67, 171, 1) 100%
+      );
+
+      min-height: 100vh;
+}

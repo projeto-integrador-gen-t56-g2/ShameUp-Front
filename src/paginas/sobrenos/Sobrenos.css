@@ -21,10 +21,11 @@
   );
   margin-bottom: 0px !important;
   margin-top: 0% !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .fontesobre {
-  font-family: "Poppins", sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 400% !important;
   color: #fff !important;
   margin-top: 2rem !important;
@@ -61,7 +62,7 @@
 
 .alinhar {
   color: #fff !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .cordefundo {
@@ -72,4 +73,52 @@
     rgba(136, 67, 171, 1) 100%
   );
   padding-top: 2% !important;
+}
+
+/* ====== Integrantes ===========*/
+.titleIntegrantes {
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.containerIntegrantes1 {
+  display: flex;
+}
+
+.containerIntegrantes2 {
+  display: flex;
+}
+
+.gridIntegrantes {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fotosIntegrantes {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 60rem;
+  margin-bottom: 0.5rem;
+}
+
+.nomeIntegrantes {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.iconIntegrantes {
+  color: white;
+  height: 2rem !important;
+  width: 2rem !important;
+  margin-right: 0.4rem;
 }
