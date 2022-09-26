@@ -178,7 +178,7 @@ function CadastroCategoria() {
               type="submit"
               variant="contained"
               color="primary"
-              className="btn btn-cad-categoria"
+              className="btn-cad-categoria"
             >
               Finalizar
             </Button>

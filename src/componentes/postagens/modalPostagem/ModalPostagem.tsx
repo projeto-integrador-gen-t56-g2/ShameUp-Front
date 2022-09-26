@@ -5,7 +5,7 @@ import { Button, Typography } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import "./ModalPostagem.css";
 import { Box } from "@mui/material";
-import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
+import CadastroPostagemModal from "../cadastroPostagemModal/CadastroPostagemModal";
 
 function getModalStyle() {
   const top = 50;
@@ -50,7 +50,7 @@ function ModalPostagem() {
         <CloseIcon onClick={handleClose} />
       </Box>
 
-      <CadastroPostagem />
+      <CadastroPostagemModal />
     </div>
   );
 

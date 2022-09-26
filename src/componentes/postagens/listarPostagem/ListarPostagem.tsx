@@ -96,7 +96,7 @@ function ListarPostagem() {
             className="bgListaPost fonteListaPe listaPost"
           >
             <CardContent className="card-postagem">
-              {!post.anonimo ? (
+              {post.anonimo ? (
                 <Box className="info-usuario-postagem">
                   <img
                     src="https://i.imgur.com/mULO3ga.jpg"

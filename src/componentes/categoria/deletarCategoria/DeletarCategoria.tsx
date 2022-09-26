@@ -100,26 +100,26 @@ function DeletarCategoria({id}:DeletarCategoriaProps) {
       <Box m={2}>
         <Card variant="outlined" className="bgListaP">
           <CardContent>
-            <Box justifyContent="center">
+            <Box justifyContent="center" >
               <Typography
                 color="textSecondary"
                 gutterBottom
-                className="fonteCadastroP"
+                className="fonteTitulo"
               >
                 Deseja deletar a categoria:
               </Typography>
-              <Typography color="textSecondary">
+              <Typography color="textSecondary" className="fontenome">
                 {categoria?.nome}
               </Typography>
             </Box>
           </CardContent>
           <CardActions>
-             <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+             <Box className="botoes" display="flex" justifyContent="start" ml={1.0} mb={2}>
               <Box mx={2}>
                 <Button
                   onClick={sim}
                   variant="contained"
-                  className="marginLeft fonteCadastroP bgCadastroP"
+                  className="bgCadastroP"
                   size="large"
                   color="primary"
                 >

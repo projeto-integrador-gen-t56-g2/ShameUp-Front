@@ -2,8 +2,21 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+.fonteTitulo{
+  color: black !important;
+}
+
+.fontenome{
+  color: rgb(31, 31, 31) !important;
+}
+
 .bgCadastroP {
   background-color: #762cad !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.bgCadastroP:hover {
+  background-color: #970dce !important;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -12,6 +25,16 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+.bgListaPB2:hover {
+  background-color: #970dce !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
 .bgListaP {
   background-color: white !important;
+}
+
+.botoes{
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

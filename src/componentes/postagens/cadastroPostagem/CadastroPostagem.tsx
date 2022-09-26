@@ -13,7 +13,7 @@ import {
   MenuItem,
   FormControl,
   FormHelperText,
-  Grid
+  Grid,
 } from "@material-ui/core";
 
 import { useNavigate, useParams } from "react-router-dom";
@@ -196,7 +196,7 @@ function CadastroPostagem() {
   }
 
   function back() {
-    navigate("/postagens");
+    navigate("/usuario/postagens");
   }
 
   return (

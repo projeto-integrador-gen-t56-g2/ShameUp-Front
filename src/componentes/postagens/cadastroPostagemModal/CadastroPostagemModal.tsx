@@ -2,6 +2,8 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import "./CadastroPostagemModal.css";
 import Categoria from "../../../models/Categoria";
 import Postagem from "../../../models/Postagem";
+import FormControl from '@material-ui/core/FormControl';
+
 
 import {
   Container,
@@ -11,7 +13,7 @@ import {
   Select,
   InputLabel,
   MenuItem,
-  FormControl,
+
   FormHelperText,
 } from "@material-ui/core";
 import { useNavigate, useParams } from "react-router-dom";
@@ -19,6 +21,7 @@ import { busca, buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
+import { Box, Checkbox, FormControlLabel, Switch } from "@mui/material";
 
 function CadastroPostagem() {
   let navigate = useNavigate();
@@ -57,7 +60,7 @@ function CadastroPostagem() {
   /*efetuar o cadastro das postagens*/
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
-    anonimo: true,
+    anonimo: false,
     texto: "",
     data: "",
     titulo: "",
@@ -88,6 +91,10 @@ function CadastroPostagem() {
       findByIdPostagem(id);
     }
   }, [id]);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPostagem({ ...postagem, [event.target.name]: event.target.checked });
+  };
 
   async function getCategorias() {
     await busca("/categorias", setCategorias, {
@@ -193,16 +200,15 @@ function CadastroPostagem() {
   }
 
   function back() {
-    navigate("/postagens");
+    navigate("/usuario/postagens");
   }
 
   return (
     <Container maxWidth="sm">
       <form onSubmit={onSubmit}>
         <Typography
-          variant="h3"
+          variant="h4"
           color="textSecondary"
-          component="h1"
           align="center"
           className="topo"
         >
@@ -252,15 +258,24 @@ function CadastroPostagem() {
           <FormHelperText className="cadastro-postagem">
             Escolha uma categoria para a postagem
           </FormHelperText>
-          <Button
-            className="botaomodal"
-            type="submit"
-            variant="contained"
-            color="primary"
-          >
-            Finalizar
-          </Button>
+
         </FormControl>
+        <Box className="checkbox-container-modal-cadastro-postagem">
+
+        <FormControlLabel className="checkbox-anonimo-modal"
+          control={<Checkbox checked={postagem.anonimo} onChange={handleChange} name="anonimo" id="anonimo" />}
+          label="Anônimo"
+        />
+        </Box>
+
+        <Button
+          className="botaomodal"
+          type="submit"
+          variant="contained"
+          color="primary"
+        >
+          Finalizar
+        </Button>
       </form>
     </Container>
   );

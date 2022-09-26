@@ -11,3 +11,22 @@
 .topo {
   font-family: "Poppins", sans-serif !important;
 }
+
+.checkbox-container-modal-cadastro-postagem {
+  margin: .5rem !important;
+}
+
+.checkbox-anonimo-modal .MuiButtonBase-root{
+  color:  rgba(156, 156, 156, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(5px) !important;
+}
+
+.checkbox-anonimo-modal .MuiTypography-body1{
+  font-family: "Poppins", sans-serif !important;
+  color: rgb(104, 104, 104);
+}
+
+.checkbox-anonimo-modal .Mui-checked{
+  color:rgba(156, 156, 156, 0.8) !important;
+}
